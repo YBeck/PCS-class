@@ -1,0 +1,33 @@
+#brunch{
+    font-size: 82px;
+    color: chocolate;
+	margin-bottom: 20px;
+}
+
+#resPic{
+    height: 430px;
+    width: 1000px;
+}
+
+header{
+	text-align:center;
+	
+}
+
+body{
+	background-color: black;
+}
+
+#links{
+	padding-bottom: 10px;
+	text-align: left;
+    margin: 0 auto;
+    width: 1000px;
+}
+ a{
+	font-size: 25px;
+	color: gray;
+	text-decoration:none;
+	margin:10px;
+}
+

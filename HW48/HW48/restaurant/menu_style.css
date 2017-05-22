@@ -1,0 +1,138 @@
+body{
+	background-image:url("images/b34870c9.png");
+}
+
+#brunch{
+    font-size: 82px;
+    color: chocolate;
+	margin-bottom: 20px;
+	margin-top: 0;
+    padding-top: 27px;
+}
+
+header{
+	max-width:100%;
+	height: 30%;
+	background-color:black;
+	text-align: center;
+}
+
+#links{
+	padding: 47px;
+	text-align: left;
+    margin: 0 auto;
+    max-width: 1000px;
+	
+}
+
+#links a{
+	font-size: 2em;
+	text-decoration: none;
+	padding-right: 24px;
+	color:white;
+}
+
+#links a:hover{
+	color:orange;
+}
+
+h1{
+	text-align:center;
+	font-size: 3.5em;
+	padding-top: 29px;
+	 margin-bottom: 40px;
+    color: red;
+}
+
+.item h1{
+	text-align: center;
+    font-size: 1.5em;
+	padding-bottom: 58px;
+    padding-top: 102px;
+	color:green;
+}
+
+.item h3{
+	font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 60px;
+	font-family: Apple Chancery, cursive;
+    color: darkgoldenrod;
+}
+
+.item p{
+	font-family: Brush Script Std, Brush Script MT,cursive;
+    font-size: 1.5em;
+    color: crimson;
+	text-transform: capitalize;
+}
+
+article{
+	max-width: 360px;
+    font-size: 1.72em;
+	display: inline-block;
+	text-align: justify;
+	padding-right: 13px;
+	padding-left: 39px;
+	padding-top: 25px;
+}
+
+ul{
+	display:inline-block;
+	vertical-align: top;
+    padding-top: 25px;
+	padding-left: 111px;
+	font-size: 1.6em;
+    margin: 0;
+    list-style-type: none;
+	text-align: center;
+}
+
+li{
+	padding-bottom:10px;
+	padding-bottom: 41px;
+}
+
+li a{
+	text-decoration:none;
+}
+a:hover{
+	color:orange;
+}
+
+li a:active{
+	color:black;
+}
+
+
+aside{
+	text-align: center;
+    font-size: 1.2em;
+	padding-top: 40px;
+	margin: 22px;
+}
+
+#chef{
+	float: right;
+    max-width: 534px;
+    height: 410px;
+    padding-right: 47px;
+	padding-top: 25px;
+}
+
+.chef_img{
+	max-width: 534px;
+    height: 410px;
+}
+
+.item{
+	text-align: center;
+    clear: both;
+    font-size: 1.5em;
+}
+
+.item_img{
+	width: 285px;
+    height: 200px;
+    padding: 32px;
+}
