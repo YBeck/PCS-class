@@ -1,0 +1,59 @@
+body{
+	background-color: black;
+	margin-top: 207px;
+}
+
+#brunch{
+    font-size: 82px;
+    color: chocolate;
+	margin-bottom: 20px;
+}
+
+#pic{
+    height: 100%;
+    width: 100%;
+}
+
+header{
+	text-align:center;
+	position: fixed;
+	top:0;
+	left: 0;
+    background-color: black;
+    width: 100%;
+	
+}
+
+#links{
+	padding-bottom: 10px;
+	text-align: left;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#res_pic{
+	height:610px;
+	width: 1225px;
+	margin: 0 auto;
+}
+ a{
+	font-size: 25px;
+	color: gray;
+	text-decoration:none;
+	margin:10px;
+}
+
+a[href^="fee"] {
+	 text-decoration: none;
+    font-size: 1em;
+    color: blue;
+	margin: 0;
+}
+
+footer{
+	background-color:black;
+	text-align:center;
+	color:white;
+	padding-top: 20px;
+    width: 100%;
+}
