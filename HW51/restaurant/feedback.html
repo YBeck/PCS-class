@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: yellow;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            text-align: center;
+            max-width: 65%;
+            margin: 29px auto;
+            height: 710px;
+            background-color: white;
+        }
+
+        label {
+            display: block;
+            padding-top: 30px;
+        }
+
+        textarea {
+            margin: 0px;
+            width: 442px;
+            height: 118px;
+            background-color: wheat;
+        }
+
+        #buttons input {
+            margin-right: 75px;
+        }
+
+        legend {
+            padding-left: 304px;
+            padding-top: 24px;
+            font-weight: bold;
+        }
+
+        #question {
+            margin-bottom: 0;
+            margin-top: 40px;
+        }
+
+        #check{
+            padding-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="brunch"> Beck's Brunch</h1>
+        <div id=links>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </header>
+    <h1>We Appreciate Your Feedback!</h1>
+    <form>
+        <label>First Name: <input type="text" name="first_name" required placeholder="First Name"/></label>
+        <label>Last Name: <input type="text" name="last_name" required placeholder="Last Name"/></label>
+        <label> Email Address: <input type="Email" name="Email Address" placeholder="Email Address"/></label>
+        <label> Phone number: <input type="tel" name="phone number" placeholder="xxx-xxx-xxxx"/></label>
+        <label> Birthday: <input type="date" name="Birthday"/></label>
+        <label> From 1-5 how would you rate your experience? <input type="range" name="rating"/></label>
+        <label>
+            Would you recommend us to your friends? 
+            Yes<input type="radio" name="recommend" value="Yes"/>
+            No<input type="radio" name="recommend" value="No"/>
+        </label>
+        <p id=question> Which of the following were you most satisfied at Beck's Brunch?</p>
+        <label id=check>
+            <input type="checkbox" name="satisfied" value="food"/>Our delicious food
+            <input type="checkbox" name="satisfied" value="service"/> Our Great tasting wines
+            <input type="checkbox" name="satisfied" value="wines"/>Our great service
+            <input type="checkbox" name="satisfied" value="atmosphere"/>The beutiful atmosphere
+        </label>
+        <label>
+        <legend>Please leave your comments here.</legend>
+        <textarea name="comments"> </textarea></label>
+        <label id=buttons>
+            <input type="submit"/>
+            <input type="reset"/>
+        </label>
+    </form>
+    <footer>
+        <p>We are located at 1234 Esen Avenue Lakewood NJ 08701</p>
+        <p>Our hours of operation are Monday-Thursday 6:30 AM - 6:00 PM</p>
+        <p>Please leave your feedback <a href="feedback.html">here</a>.</p>
+        <p>Copyright 2017 YB designs</p>
+    </footer>
+</body>
+
+</html>

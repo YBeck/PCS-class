@@ -1,0 +1,251 @@
+
+
+body {
+    height: 100%;
+	margin-top:175px;
+	background-color: black;
+
+}
+
+#bd{
+	background-color:yellowgreen;
+	margin:0 auto;
+	margin-top:175px;
+}
+
+#stuff{ 
+    background-image: url("images/rest.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;	
+}
+
+#brunch{
+    font-size: 82px;
+    color: chocolate;
+	margin-bottom: 20px;
+	margin-top: 0;
+    padding-top: 27px;
+}
+
+header{
+	position: fixed;
+	top:0;
+	left: 0;
+	width:100%;
+	height: 175px;
+	background-color:black;
+	text-align: center;
+	z-index: 1;
+}
+
+#bord{
+	border:15px ridge blue ;
+	overflow:hidden; 
+	margin-bottom: 20px;
+	padding-left: 78px;
+	padding-bottom: 30px;
+
+}
+
+#links{
+	padding-bottom: 10px;
+	text-align: left;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#about{
+	background-color:yellowgreen;
+	margin-bottom: 0;
+    padding-bottom: 0;
+    height: 75px;
+}
+
+#pg{
+	text-align:center;
+	padding-top: 40px
+}
+
+.pics{
+	background-color: white;
+	width: 160px;
+	height: 148px; 
+    border:3px solid green;
+	float:left;
+	margin: 10px;
+	border-radius:18px;
+}
+
+.images-12{
+	transform: rotate(-12deg);
+}
+
+.images12{
+	transform: rotate(12deg);
+}
+
+
+img{
+	width: 160px;
+	height: 101px;
+}
+
+.pics img {
+	border-radius:18px;
+}
+
+.pics p {
+	text-transform:capitalize;
+}
+
+.picTxt{
+	text-align:center;
+}
+
+#imglink{
+	text-align:center;
+	margin-top:10px;
+}
+
+a{
+	text-decoration:none;
+	font-size: 22px;
+	font-family: serif;
+	color:white;
+	margin:10px;
+}
+
+a:hover{
+	color:orange;
+}
+a:clicked{
+	color:black;
+}
+
+a[href^="fee"] {
+	 text-decoration: none;
+    font-size: 1em;
+    color: blue;
+	margin: 0;
+}
+
+@media screen and (max-width:1351px){
+	.txt{
+		background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 100%);
+		text-align: center;
+		font-size: 22px;
+		height: 233px;
+		width: 100%;
+	}
+	
+	#pic1{
+	background-image:url(images/about1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+
+	#pic2{
+		background-image:url(images/about2.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+		
+	.about_pic{
+		border: 2px solid orange;
+		width: 71%;
+		height: 402px;
+		margin: 30px auto;
+	}
+}
+	
+@media screen and (min-width:1352px){
+	.txt{
+		background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(0,255,0,1) 100%);
+		padding-left: 17px;
+		padding-bottom: 17px;
+		text-align:left;
+		font-size: 22px;
+		height: 343px;
+		width: 649px;
+	}
+
+	.about_pic{
+		margin-left: 2px;
+		margin-right: 1px;
+		border: 2px solid orange;
+		overflow:hidden;
+		width: 661px;
+		height: 357px;
+		
+	}
+	
+	#pic1{
+		background-image:url(images/about1.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+    }
+
+	#pic2{
+		background-image:url(images/about2.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+		.flt_right{
+			float:right;
+		}
+
+		.flt_left{
+			float:left;
+		}
+}	
+
+#au{
+	color: yellow;
+    text-align: center;
+	text-shadow: 2px 2px red;
+	height: 75px;
+	line-height: 75px;
+	margin-top: 0;
+}
+
+.video{
+	text-align:center;
+}
+
+footer{
+	background-color:black;
+	text-align:center;
+	color:white;
+	padding-top: 20px;
+	clear: both;
+}
+
+table{
+	border-collapse: collapse;
+    margin: 30px auto;
+    margin-top: 0;
+}
+
+th, td{
+	border: 2px solid blue;
+	text-align: center;
+}
+
+#rating{
+    margin-top: 40px;
+	margin-bottom: 10px;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd){
+	background-color: aqua;
+}
+
+
