@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--link rel="stylesheet" href="/bootstrap-3.3.7/css/bootstrap.min.css"-->
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#products">Products</a></li>
+                        <li class="active"><a href="#signup">Sign Up</a></li>
+                        <li class="active"><a href="#financials">Financials</a></li>
+                        <li class="active"><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="h1 text-uppercase text-center">estuff</h1>
+            <h2 class="h2 text-center">A <em>PCS</em> company</h2>
+        </div>
+        <article id=products class="row pad">
+            <div  class="col-xs-12">
+                <div class="h3 text-left">Products</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quos fugiat nulla numquam neque natus
+                    in incidunt. Iste saepe, asperiores odio totam, deserunt maxime dolorum ut officiis sit mollitia tenetur.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 class="h4">Computers</h4>
+                        <img class="img-responsive" src="images/macworld.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugit, aspernatur. Obcaecati, placeat
+                            ut quisquam et voluptatum voluptates dolorem voluptate aspernatur reprehenderit facere ea nostrum
+                            ipsa aut libero officiis aperiam!
+                    </div>
+                    <div class="col-md-4 border">
+                        <h4 class="h4">Choirs</h4>
+                        <video src="video/choir.mp4" poster="images/shira.png" class="img-responsive" controls></video>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eos suscipit explicabo iusto itaque
+                            totam a saepe quisquam nihil recusandae nisi cumque delectus vero dolor, deleniti fuga adipisci.
+                            Corporis, quo!</p>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="h4">Candy</h4>
+                        <img class="img-responsive" src="images/candy.png" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis veniam, eveniet atque deserunt
+                            accusantium, repellat, sapiente ex debitis ad enim commodi molestiae! Odit sequi labore excepturi
+                            perferendis repellendus, numquam architecto.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="signup" class="row">
+            <div class="col-xs-12 text-center bg-info form">
+                <h3 class="h3">Sign Me Up!</h3>
+                <form class="form-inline" action="test.php" method="post">
+                    <div class="form-group text-left">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group text-left">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </article>
+        <article id="financials" class="row">
+            <div class=col-xs-12>
+                <h3 class="h3 text-left">Financials</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque minima nobis, animi minus quam doloribus.
+                    Labore aut illum sequi facilis animi, eum aliquam perferendis at repellat veritatis provident in minima
+                    error facere? Ab itaque magnam rem, debitis fugit facilis nesciunt pariatur voluptatibus, aliquid mollitia
+                    sint esse error asperiores obcaecati exercitationem ipsam quia ullam vel. Nulla at, blanditiis ex ullam,
+                    enim sunt eos magni minima quibusdam sed est libero quos rem sequi id quis quidem vero.
+                </p>
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <table class="table table-striped table-bordered table-hover">
+                            <caption>Profits-By Quarter</caption>
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>1st Quater Profits</th>
+                                    <th>2nd Quater Profits</th>
+                                    <th>3rd Quater Profits</th>
+                                    <th>4th Quater Profits</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>2012</th>
+                                    <td>$1287654.44</td>
+                                    <td>$2154635.30</td>
+                                    <td>$6573422.90</td>
+                                    <td>$0243567.44</td>
+                                    <td>$51765876.20</td>
+                                </tr>
+                                <tr>
+                                    <th>2013</th>
+                                    <td>$1765467.70</td>
+                                    <td>$1765123.12</td>
+                                    <td>$1098234.34</td>
+                                    <td>$2654987.23</td>
+                                    <td>$15676543.76</td>
+                                </tr>
+                                <tr>
+                                    <th>2014</th>
+                                    <td>$26534656.37</td>
+                                    <td>$1870987.23</td>
+                                    <td>$2109093.12</td>
+                                    <td>$1093456.16</td>
+                                    <td>$19876567.98</td>
+                                </tr>
+                                <tr>
+                                    <th>2015</th>
+                                    <td>$1878765.43</td>
+                                    <td>$1098909.19</td>
+                                    <td>$1090565.31</td>
+                                    <td>$2786546.09</td>
+                                    <td>$23765434.78</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">Total</td>
+                                    <td>$458767890.76</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <artical id="about" class="row">
+            <div class="col xs 12">
+                <h3 class="h3">About Us</h3>
+                <p>`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam autem minima, officia beatae assumenda vitae,
+                    eveniet pariatur incidunt magnam sit similique natus, rem alias cumque modi recusandae nam excepturi
+                    ab maxime. Explicabo, omnis quod! Eos reiciendis, doloremque veritatis. Temporibus velit eligendi officiis,
+                    veritatis, vel impedit non architecto nostrum inventore enim eius illo optio amet magnam fugiat odio
+                    odit tempore. Qui nihil voluptates quas aut, atque quis fugiat, voluptatem iste eos vitae sequi perspiciatis
+                    fugit temporibus reiciendis. Recusandae suscipit dolorem nostrum enim vero sit molestiae commodi. Ex
+                    magnam corrupti, dolor accusamus molestias ab et odit adipisci! Sed commodi, vitae fugiat impedit officia
+                    porro nemo sint, laboriosam nobis esse at voluptates nostrum amet, ut illum? Nobis eum eius neque magnam,
+                    voluptas quod earum excepturi. Dolorum dolor quia, vitae voluptatibus doloremque nesciunt dolorem ea
+                    totam! Sint voluptatem at cum facere. Repellat delectus dolore qui reprehenderit cum voluptas porro consequuntur
+                    illum esse assumenda dolorem repellendus molestias asperiores veniam dolorum obcaecati deleniti eligendi
+                    quod saepe, beatae non facere numquam at provident impedit. Ipsa fuga sint ut quam sequi omnis illo impedit
+                    quae sit nostrum aperiam veniam eligendi iste vero voluptatum, ipsam, magnam aspernatur dolores esse
+                    magni quasi nulla. Deleniti quae repellat nisi esse minus qui suscipit sequi dolores hic fugiat. Libero
+                    iste optio quibusdam assumenda ipsa praesentium ad possimus eum? Itaque iure quo voluptas nobis laboriosam
+                    doloremque, dignissimos ipsum tempore, beatae corrupti! Neque quam saepe atque provident quibusdam blanditiis
+                    earum modi distinctio molestiae culpa dicta, magnam ex expedita nobis quos velit adipisci corporis consectetur
+                    temporibus! Dolorem qui quae non et esse, modi aperiam minima, fugit architecto inventore cum, eos maiores
+                    ipsam. Quam eveniet autem deserunt, sint veritatis modi magnam nam necessitatibus assumenda aperiam ratione
+                    debitis quibusdam dicta, minus voluptate temporibus laborum. Officiis distinctio quidem dolores exercitationem
+                    numquam, nihil praesentium impedit quis explicabo ab recusandae voluptates nesciunt eum beatae laudantium
+                    doloribus. Magnam sunt asperiores sit corrupti molestiae est expedita temporibus beatae, repellendus
+                    praesentium. Hic repellendus molestiae doloremque, in incidunt similique, provident dolore minima, distinctio
+                    quae ducimus quo iure accusantium consequatur praesentium maxime ut facere aliquid labore earum libero
+                    asperiores porro reiciendis. Quam quaerat at voluptatum debitis ratione libero animi quidem laborum molestias
+                    ea, facere qui atque eveniet sunt ut, aspernatur repellendus. Adipisci enim, sit repudiandae a eligendi
+                    molestiae nihil nostrum dignissimos temporibus perferendis sint. Nihil debitis sit ratione, repellat
+                    facere, molestiae esse in. Fuga quae sint neque autem perspiciatis voluptate, consectetur enim, atque,
+                    tenetur libero illo mollitia ex incidunt animi officia amet corporis. Voluptates, harum eius! Perspiciatis
+                    possimus, libero non ut repellat mollitia velit dolor incidunt, ipsum culpa, neque quae reprehenderit!
+                    Asperiores molestiae minima cum voluptatum nostrum sint vitae unde mollitia neque totam, laudantium,
+                    veniam ratione deleniti, consectetur suscipit ut ipsam consequatur voluptates iusto corrupti! Omnis reprehenderit
+                    consectetur maxime veritatis, possimus, numquam molestiae velit minima impedit dolore quod doloribus
+                    quaerat animi, vero officiis? Illo quos tempore obcaecati repudiandae ex ipsa dolorem nesciunt officiis
+                    animi deserunt molestias beatae veritatis architecto voluptas, quisquam fuga minus debitis consectetur
+                    veniam, perferendis reiciendis possimus ipsum commodi. Distinctio dolor nisi, necessitatibus perspiciatis
+                    asperiores illo ex non enim porro numquam ab quo, odit vitae, ipsam sit fugiat inventore temporibus.
+                    Dolor, eius fuga impedit doloribus delectus, at corrupti repellendus dignissimos perspiciatis saepe officia
+                    necessitatibus voluptas a earum temporibus inventore nesciunt quas recusandae dolorum. Minus voluptatibus
+                    quae voluptates inventore doloribus unde esse officia? Rerum, obcaecati. Unde reprehenderit architecto
+                    provident impedit eligendi quod laudantium dolor voluptates harum tenetur eveniet, laborum odio natus
+                    dolorem ipsa repellat, neque debitis maxime. Provident omnis quis reiciendis voluptate eaque magni magnam
+                    id, sequi expedita laborum quos iste a incidunt eos et culpa natus. Quo, quod. Sint molestiae modi debitis,
+                    harum aperiam!</p>
+            </div>
+        </artical>
+    </div>
+    <!-- end container -->
+    <footer class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+                <p> &copy; ESTUFF 2017</p>
+        </div>
+    </footer>
+    <!--script src="/jquery-1.12.4.min.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--script src="/bootstrap-3.3.7/js/bootstrap.min.js">
+
+    </script-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
