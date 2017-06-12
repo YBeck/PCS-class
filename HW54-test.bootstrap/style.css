@@ -1,0 +1,53 @@
+body {
+    padding: 70px 0;
+}
+.navbar-inverse .navbar-nav>.active>a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.col-md-4{
+    padding-left: 20px;
+}
+
+article{
+    padding-top:30px;
+}
+@media screen and (min-width:992px){
+    .border{
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+    }
+
+    .form{
+        padding-bottom: 13px;
+    }
+}
+
+.border{
+    border-radius: 5px;
+}
+
+td{
+    text-align: right;
+}
+
+tfoot td:first-child{
+    font-weight: bold;
+}
+
+tbody td:last-child, tfoot td:last-child{
+    color: red;
+}
+
+/*footer p{
+    color:white;
+    padding-top: 15px;
+}*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:white;
+}
