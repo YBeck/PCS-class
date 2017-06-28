@@ -1,4 +1,9 @@
 <?php
+    $name="";
+    $email="";
+    $age="";
+    $rate="";
+    //var_dump($_GET);
     if(isset($_GET['name'])):
         $name= $_GET['name'];
     endif;
@@ -45,7 +50,6 @@
 <body>
     <div class="container">
             <h1 class="h1 text-center">Your Information</h1>
-        </div>
         <form class="form-horizontal">
             <?php if(isset($errors)): ?>
                     <div class="well text-danger col-sm-offset-4">
