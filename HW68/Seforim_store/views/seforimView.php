@@ -53,7 +53,7 @@
                
                 <?php if(empty($errors) && isset($_POST['info'])){ ?>
                     <h2 class="h2">The sefer is: <?= getSeforimInfo($seferId) ?></h2>
-                <?php } ?>
+                <?php } ?> 
             </form>
         </div>
             <?php endif; ?>

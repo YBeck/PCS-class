@@ -11,14 +11,15 @@ switch($action){
         break;
     case 'table':
         include 'controllers/tableController.php';
-    break;
+        break;
     case 'add':
         include 'controllers/addSeferController.php';
+        break;
+    case 'selected':
+        include 'controllers/selectedController.php';
         break;
     default:
         $errors = "Can't find $action";
         break;
-
 }
-
 ?>

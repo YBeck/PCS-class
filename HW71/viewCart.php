@@ -14,7 +14,7 @@ if(isset($_GET['edit'])){
 }
 
 if(isset($_GET['input'])){
-    if(!empty($_GET['input']) && is_numeric($_GET['input'])){
+    if(!empty($_GET['input']) && is_numeric($_GET['input']) && $_GET['input'] > 0){
         $input = $_GET['input'];
         $theItem = $_GET['item'];
         $_SESSION['cart'][$theItem] = $input;

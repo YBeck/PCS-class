@@ -17,6 +17,7 @@
        $yearB = 2008;
        $yearC = 2016;
     ?>
+    <div class="container"> 
        <div class="row">
             <div class="col-md-6 col-xs-offset-3 tabel-responsive text-right">
                 <table class="table table-striped table-bordered">
@@ -40,7 +41,7 @@
                 </table>
             </div>
        </div>
-
+    </div>
     <script src="/jquery-1.12.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/bootstrap-3.3.7/js/bootstrap.min.js"></script>

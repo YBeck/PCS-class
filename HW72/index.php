@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="jumbotron text-center"><h1>Login</h1></div>
+<div class="jumbotron text-center"><h1>Create account</h1></div>
 <h2 class="text-center">create account</h2>
     <form class="form-inline justify-content-center" method="post" action="authentication.php">
         <label class="sr-only" for="username" class="col-sm-3 col-form-label col-form-label-lg">User Name</label>User Name

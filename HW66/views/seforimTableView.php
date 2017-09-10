@@ -16,7 +16,7 @@ include 'top.php';
             <tbody>
                 <?php foreach(getRows() as $seforim): ?>
                     <tr>
-                        <td><a href="../controllers/selectedController.php?id=<?=$seforim['id']?>"><?= $seforim['name'] ?></a></td>
+                        <td><a href="index.php?action=selected&id=<?=$seforim['id']?>"><?= $seforim['name'] ?></a></td>
                         <td><?= $seforim['id'] ?></td>
                         <td><?= $seforim['price'] ?></td>
                         <td><?= $seforim['category'] ?></td>

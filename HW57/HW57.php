@@ -27,7 +27,7 @@
                             ["Name" => "Barack Husain Obamba", "Year" => 2009],
                             ["Name" => "Donald J Trump", "Year" => 2016]
                         ];
-                            foreach($presidentsV2 as $president){
+                            foreach($presidentsV1 as $president){
                                 echo("<tr>");
                                 foreach($president as $value){
                                     echo("<td>" . $value . "</td>");
@@ -52,7 +52,7 @@
                         foreach($presidentsV2[0] as $key => $head){
                             echo "<th>" . $key . "</th>";
                         }; 
-                        echo "</thead></tr>";
+                        echo "</tr></thead>";
                   
                         echo "<tbody>";
                         foreach($presidentsV2 as $president){

@@ -23,7 +23,7 @@ include 'top.php';
                 <label for="price">Price:</label>
                 <input type="number" step="any" class="form-control" id="price" name="priceEntered">
             </div>
-        <button type="submit" class="btn btn-primary">Add Sefer</button>
+        <button name="add" type="submit" class="btn btn-primary">Add Sefer</button>
         <a href="../controllers/seforimController.php">Seforim Store</a>
         </form>
         <?php endif ?>

@@ -53,12 +53,12 @@
         $returnString = "";
         foreach(getRows() as $seferInfo){
                 if($seferInfo['id'] == $id){
-                    $returnString .= " " . $seferInfo['sefer_name'] . " Price: " . $seferInfo['price'];
+                    $returnString .= " " . $seferInfo['sefer_name'] . " Price: $" . number_format($seferInfo['price'], 2);
                     $equel = true;
                 }
             }
         if(!$equel){
-            die($name . " is not a valid sefer");
+            die("Please enter a valid sefer");
         }
         return $returnString;
     }

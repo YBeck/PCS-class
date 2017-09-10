@@ -21,22 +21,18 @@
         }
         return $db;
     }
-    
-     function getRows(){
+
+    function getRows(){
          $db = getConnection();
         try{
-            $returnArr = [];
-            $query = "SELECT s.name FROM seforim s";
+            $query = "SELECT * FROM seforim";
             $results = $db->query($query);
-            foreach($results as $seforim) {
-               $returnArr[] = $seforim; 
-               
-            }
+            $seforimOption = $results -> fetchAll();
            
         }catch(PDOException $e){
             die("Something went wrong " . $e->getMessage());
         }
-        return $returnArr;
+        return $seforimOption;
     }
 
     function getSeforimInfo($name){
@@ -84,10 +80,10 @@
         <div class="form-group">
             <label for="sefer">Choose a Sefer</label>
             <select class="form-control" id="sefer" name="sefer" required>
-            <?php foreach(getRows() as $key => $seforim):?>
-                <option
+            <?php foreach(getRows() as $seforim):?>
+                 <option
                 <?php if($name === $seforim['name']) echo "selected" ?>
-                ><?= $seforim['name']?></option>
+                ><?= $seforim['name']?></option> 
             <?php endforeach ?>
             </select>
       </div>

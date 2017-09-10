@@ -26,12 +26,12 @@
                             <?php endforeach ?>
                             </select>
                         </div>
-                        <button name="add" type="submit" class="btn btn-primary">Get Sefer Info</button>
+                        <button name="info" type="submit" class="btn btn-primary">Get Sefer Info</button>
                         <button name="delete" type="submit" class="btn btn-primary">Delete Sefer</button>
                         <?php if(isset($_GET['delete'])): ?>
                             <h2 class="h2"><?=$name?> was deleted</h2>
                         <?php endif ?>
-                        <?php if(empty($errors) && isset($_GET['add'])){ ?>
+                        <?php if(empty($errors) && isset($_GET['info'])){ ?>
                             <h2 class="h2">The sefer is: <?= getSeforimInfo($name) ?></h2>
                         <?php } ?>
                 </form>

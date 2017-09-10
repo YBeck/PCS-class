@@ -6,9 +6,10 @@ class db {
     private $options;
 
     public function __construct(){
-        $this -> cs = "mysql:host=localhost;dbname=user_password";
-        $this -> user = "test";
-        $this -> password = "password";
+       // $array = parse_ini_file("../settings.ini");
+        // $this -> cs = "mysql:host=localhost;dbname=user_password";
+        // $this -> user = "test";
+        // $this -> password = "password";
         $this -> options =  [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
     }
 

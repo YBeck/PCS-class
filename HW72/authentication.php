@@ -19,7 +19,8 @@ if(!empty($userName) && !empty($password)){
         $statement -> bindValue('password', $hash);
         $rowsAmount =$statement -> execute();
     
-    header("Location:index.php");
+    header("Location:login.php");
+    exit;
 }
 
 
@@ -39,11 +40,12 @@ if(isset($_POST['loginpassword']) && isset($_POST['loginName'])){
             $statement = $con-> prepare($query);
             $statement -> bindValue('name', $loginName);
             $statement -> execute();
-            $hashPass = $statement -> fetch();
+            $hashPass = $statement -> fetch(PDO::FETCH_COLUMN);
 
-    if(password_verify($loginPassword, $hashPass['password'])){
+    if(password_verify($loginPassword, $hashPass)){
         $_SESSION['verifiedUsers'] = ['user_name' => $loginName, 'password' => $loginPassword];
         header("Location:welcome.php");
+        exit;
    // include 'welcome.php';     
     }
     else{

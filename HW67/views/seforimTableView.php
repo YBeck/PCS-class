@@ -1,5 +1,14 @@
 <?php
-include 'top.php';
+    $styles = ".btn-link{
+        font-size: 2em;
+    }
+    .next::after{
+        content: \" >>>\";
+    }
+    .previous::before{
+        content:\"<<< \";
+    }";
+    include 'top.php';
 ?>
  <div class="jumbotron"><h1 class="h1">Seforim Store</h1></div>
 <div class="row">

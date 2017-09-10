@@ -2,6 +2,7 @@
     $name = "";
     $years = "";
     $favoriteLang[] ="";
+    $equal = false;
 
     $language = [
         "Java",
@@ -9,7 +10,7 @@
         "HTML/css",
         "php"
     ];
-
+    
     if($_GET || $_POST){ // will return false the first time
         if(empty($_GET['name'])){
             $errors[] = "Name is required!";
@@ -27,7 +28,7 @@
             $errors[] = "Years are from 0 - 50";
         }
         if(empty($_GET['code'])){
-            $errors[] = "Language is required!";
+            $errors[] = "Please make a selection";
         }
         else{
             $favoriteLang = $_GET['code'];
@@ -38,7 +39,30 @@
             endforeach;
         }
 
-    };
+        if(empty($_GET['language'])){
+            $errors[] = "Language is required!";
+            }
+            else{
+                $user = ($_GET['language']);
+                var_dump ($user);
+                echo "<br/>";
+                $userInput = explode(",",$user);
+                 var_dump ($userInput);
+                foreach($language as $userLang){
+                    foreach($userInput as $uInput){
+                           if(strcasecmp($userLang , $uInput) == 0){
+                            $equal = true;
+                            echo "equal <br/>";
+                            break;
+                        }
+                    }
+                    if(!$equal) {
+                        $errors[] = $uInput . " is not a accepted language";
+                        echo "not-equal <br/>";
+                    }
+                }           
+         };
+    }  
 ?>
 
 <!DOCTYPE html>
@@ -93,6 +117,16 @@
                     <?php endforeach;  ?>
                    
                     </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Language">Language:</label>
+                <div class="col-sm-10">
+                     <input type="text" class="form-control" id="Language" name="language" placeholder="Enter a list of languages" 
+                            <?php if($equal){ ?>
+                            value="<?=$user?>"
+                            <?php } ?> required>      
                 </div>
             </div>
             <?php if(empty($errors) && ($_GET || $_POST)) { ?> <!-- if no errors and its not the 

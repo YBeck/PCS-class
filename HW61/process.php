@@ -26,7 +26,7 @@ function num_days($month, $year){
     global $months;
     $days = "";
     if($month == "FEBRUARY"):
-        if(($year % 2 === 0 && $year % 100 !== 0) || ($year % 400 === 0)):
+        if($year % 4 === 0 && ($year % 100 !== 0 || $year % 400 === 0)):
             $days = "29";
         else:
             $days = "28";

@@ -1,4 +1,5 @@
 <?php
+
 $cs = "mysql:host=localhost;dbname=seforim_store";
 $user = "test";
 $password = 'password';

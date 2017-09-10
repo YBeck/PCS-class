@@ -16,7 +16,7 @@ if(isset($_POST['priceEntered'])){
     }
 }
 
-if(isset($_POST['$seferName']) && empty($errors)){
+if(isset($_POST['add']) && empty($errors)){
     $insert = "INSERT INTO seforim (name, price) VALUES (:seferName, :priceEntered)";
     $statement = $db-> prepare($insert);
     $statement -> bindValue('seferName', $seferName);

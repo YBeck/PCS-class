@@ -1,7 +1,9 @@
 <?php 
 session_start();
 if(!isset($_SESSION['verifiedUsers'])){
+    http_response_code(401);
     header("Location:login.php");
+    exit;
 }
 ?>
 <!DOCTYPE html>

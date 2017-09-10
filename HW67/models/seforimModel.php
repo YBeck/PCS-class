@@ -11,13 +11,15 @@ require 'db.php';
          global $db;
          global $category;
          global $offset;
+         if(empty($category)){
+             $category = "";
+         }
         try{
             $query = "SELECT s.id, s.name, s.price, s.category FROM seforim s";
             if(!empty($category)){
                 $query .= " JOIN categories c ON s.category = c.id WHERE c.name = :category";
             }
             $query .= " LIMIT 4 OFFSET :offset";
-            print_r($category);
             $results = $db-> prepare($query);
             if(!empty($category)){
                 $results -> bindValue('category', $category);

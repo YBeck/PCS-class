@@ -3,7 +3,6 @@
     $email="";
     $age="";
     $rate="";
-    //var_dump($_GET);
     if(isset($_GET['name'])):
         $name= $_GET['name'];
     endif;
@@ -52,7 +51,7 @@
             <h1 class="h1 text-center">Your Information</h1>
         <form class="form-horizontal">
             <?php if(isset($errors)): ?>
-                    <div class="well text-danger col-sm-offset-4">
+                    <div class="alert alert-danger col-sm-offset-4">
                         <ul>
                         <?php foreach ($errors as $error) { ?>
                             <li> <?= $error ?> </li>
@@ -81,7 +80,7 @@
             <div class="form-group">
                 <label class="control-label col-sm-2 col-sm-offset-3" for="rate">Rate Us:</label>
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" min="1" max="10" id="rate" name="rate" value="<?= $rate ?>">
+                    <input type="number" class="form-control"  id="rate" name="rate" value="<?= $rate ?>">
                 </div>
             </div>
             <?php if(isset($errors)): ?>

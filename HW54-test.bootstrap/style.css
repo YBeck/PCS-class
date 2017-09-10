@@ -40,14 +40,9 @@ tbody td:last-child, tfoot td:last-child{
     color: red;
 }
 
-/*footer p{
-    color:white;
-    padding-top: 15px;
-}*/
-
 footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color:white;
+    margin-left: 0;
 }
