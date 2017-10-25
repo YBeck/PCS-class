@@ -3,7 +3,10 @@ var myApp = myApp || {};
 myApp.utils = (function (utils) {
     'use strict';
     utils.stringCaseInsensitiveEquals = function (a, b) {
-        return a.toUpperCase() === b.toUpperCase() && isNaN(a) && isNaN(b);
+        if (!isNaN(a) && !isNaN(b)) {
+            return "please enter a string";
+        }
+        return a.toUpperCase() === b.toUpperCase();
     };
 
     return utils;
