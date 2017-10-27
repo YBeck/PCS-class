@@ -8,6 +8,5 @@ function ourMap(arr) {
     });
     return retArray;
 }
-
+console.log("array.map");
 console.log("original array", originalArray, "ourMap", ourMap(originalArray));
-

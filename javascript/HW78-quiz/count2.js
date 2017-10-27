@@ -1,16 +1,12 @@
 var app = app || {};
 
-app.count = (function (count) {
+app.counters = (function (counter) {
     "use strict";
     var numOfCounters = 0;
-    var theCounter = 0;
-    count.counters = function () {
+    counter.newCounter = function() {
+        console.log("creating counter number " + (++numOfCounters));
+        var theCounter = 0;
         return {
-            newCounter: function () {
-                theCounter = 0;
-                console.log(++numOfCounters + " were created");
-                return this;
-            },
             increment: function () {
                 theCounter++;
                 return this;
@@ -20,5 +16,8 @@ app.count = (function (count) {
             }
         };
     };
-    return count;
-}(app.count || {}));
+    return counter;
+}(app.counters || {}));
+
+
+
