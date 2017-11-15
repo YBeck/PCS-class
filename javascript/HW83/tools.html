@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1 id="h1">Test wrap</h1>
+        <button id="theButton">submit</button>
+        <script src="tools.js"></script>
+        <script>
+            var h1 = pcs.tools.wrap('h1')
+            pcs.tools.wrap('theButton').click(function () {
+            if (h1.get().style.display === 'none') {
+                h1.show()
+            } else {
+                h1.hide();
+            }
+            })
+           
+        </script>
+    </body>
+
+</html>
