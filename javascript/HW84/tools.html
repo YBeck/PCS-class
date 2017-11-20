@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1 id="h1">Test wrap</h1>
+        <button id="theButton">submit</button>
+        <script src="tools.js"></script>
+        <script>
+            // var h1 = pcs.tools.wrap('h1')
+            // h1.pulsate();
+            // pcs.tools.wrap('theButton').click(function () {
+            // if (h1.css('display') === 'none') {
+            //     h1.show()
+            // } else {
+            //     h1.hide();
+            // }
+            // })
+           var contacts = ['Trump', 'Clinton', 'Obama'];
+           var ul = document.createElement('ul');
+           contacts.forEach(function(element){
+                var li = document.createElement('li');
+                console.log(li);
+                li.id = element;
+                var theId = li.id;
+                var phone = 345;
+                ul.appendChild(li);
+                var wrapper = pcs.tools.wrap(theId);
+                    wrapper.setInnerHTML(element)
+                    .setData({
+                        name: element,
+                        title: 'politition',
+                        phone: '123-456-' + phone++,
+                    })
+                    .click(function(){
+                        var get = wrapper.getData();
+                        alert(get.name,
+                            get.title,
+                            get.phone);
+                    });
+           });
+           document.body.appendChild(ul);
+        </script>
+
+    </body>
+
+</html>
