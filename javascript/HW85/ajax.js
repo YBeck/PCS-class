@@ -4,8 +4,10 @@
     var load = $('button');
     var urlInput = $('#urlInput');
     var artical = $('artical');
+    $('body').append('<div class="text-center"><img src="images/Spinner.png"></div>');
+    $('div img').hide();
     load.click(function () {
-        $('body').append('<div class="text-center"><img src="images/Spinner.png"></div>');
+        $('div img').show();
         setTimeout(function () {
             $.get(urlInput.val(), function (url) {
            //$('body').append('<artical>' + url + '</artical>');
