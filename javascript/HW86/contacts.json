@@ -1,0 +1,20 @@
+[
+    {
+        "firstName" : "Donald",
+        "lastName" : "Trump",
+        "email" : "dtrump@whitehouse.gov",
+        "phone" : "123456789"
+    },
+    {
+        "firstName" : "Hillary",
+        "lastName" : "Clinton",
+        "email" : "hclinton@clinton.com",
+        "phone" : "987654321"
+    },
+    {
+        "firstName" : "Mike",
+        "lastName" : "Pence",
+        "email" : "mpence@whitehouse.gov",
+        "phone" : "567898432"
+    }
+]
