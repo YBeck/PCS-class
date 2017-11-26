@@ -4,10 +4,6 @@
     var firstTime = true;
 
     var contactTable = $('#contactTable');
-    // var fname = get('fname');
-    // var lname = get('lname');
-    // var email = get('email');
-    // var phone = get('phone');
     var addButton = $('#addButton');
     var form = $('#form');
     var getContacts = $('#getContacts');
@@ -15,7 +11,8 @@
 
     getContacts.click(function (event) {
         event.preventDefault();
-        $.get("contacts.json", function (url) {
+        $.get("contacts.php", function (url) {
+            console.log(url);
            url.forEach(function (element) {
                loadContact(element);
             });
@@ -28,8 +25,8 @@
             firstTime = false;
         }
         contactTable.append(
-            '<tr><td>' + contact.firstName + '</td>' +
-            '<td>' + contact.lastName + '</td>' +
+            '<tr><td>' + contact.first_name + '</td>' +
+            '<td>' + contact.last_name + '</td>' +
             '<td>' + contact.email + '</td>' +
             '<td>' + contact.phone + '</td></tr>'
         );
@@ -52,7 +49,7 @@
     }
 
     addButton.click(function (event) {
-        addContact( /*fname.value, lname.value, email.value, phone.value*/ );
+        addContact();
         event.preventDefault();
     });
 
