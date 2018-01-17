@@ -6,18 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <style>
-            html, body ,#canvas{
+            html, body{
                 margin: 0;
                 padding: 0;
                 height: 100%;
                 width: 100%;
             }
+             #canvas{
+                 height: 100%;
+                 border: 2px solid green;
+                 box-sizing: border-box;  
+             }
+             #align{
+                display: inline-flex;
+             }
+             h2{
+                padding-left: 40px;
+             }
         </style>
         <title>Document</title>
     </head>
 
     <body>
-        <canvas id="canvas"></canvas>
+        <div id="align">
+            <canvas id="canvas"></canvas>
+            <h2>Points: <span id="score">0</span></h2>
+        </div>
         <script src="snake.js"></script>
     </body>
 
