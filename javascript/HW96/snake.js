@@ -19,13 +19,14 @@
     window.addEventListener('resize', resize);
     class Apple{
         constructor() {
-            apple.src = 'images/apple.png';
+            //apple.src = 'images/apple.png';
             this.placeApple();
         } placeApple() {
             const x = Apple.getRandomNumberBetween(0, (canvas.width)-64);
             const y = Apple.getRandomNumberBetween(0, (canvas.height)-64);
             this.appleX = x - (x % 64);
             this.appleY = y - (y % 64);
+            apple.src = 'images/apple.png';
             apple.onload = () => { ctx.drawImage(apple, this.appleX, this.appleY); };
         } get x() {
             return this.appleX;
