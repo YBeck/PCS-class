@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            html, body{
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+            }
+             #canvas{
+                 height: 100%;
+                 border: 2px solid green;
+                 box-sizing: border-box;  
+             }
+             #align{
+                display: inline-flex;
+             }
+             h2{
+                padding-left: 30px;
+             }
+             #mute{
+                 position: absolute;
+                right: 50px;
+             }
+        </style>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <audio src="sounds/background.mp3" id="background" autoplay loop></audio>
+        <audio src="sounds/crunch.wav" id="crunch"></audio>
+        <audio src="sounds/crash.wav" id="crash"></audio>
+        <button id="mute" type="button">Mute</button>
+        <div id="align">
+            <canvas id="canvas"></canvas>
+            <h2>Points: <span id="score">0</span></h2>
+        </div>  
+        <script src="snake.js"></script>
+    </body>
+
+</html>
