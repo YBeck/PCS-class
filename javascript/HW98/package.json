@@ -1,0 +1,17 @@
+{
+  "name": "using_jquery",
+  "version": "1.0.0",
+  "description": "This is the first time i'm using webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yochanan Beck",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
