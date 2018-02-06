@@ -1,0 +1,14 @@
+.inner-list {
+  border: 1px solid black !important;
+  margin-bottom: 8px !important;
+}
+#index {
+  display: flex;
+  justify-content: space-between;
+}
+#addForm {
+  display: none;
+}
+#li li {
+  cursor: pointer;
+}

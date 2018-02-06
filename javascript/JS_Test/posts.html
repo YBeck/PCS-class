@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center">Posts</h1>
+            </div>
+            <a href="index.html">Home page</a>
+            <form id="addForm">
+                <div class="form-group">
+                    <label for="textarea">Example textarea</label>
+                    <textarea class="form-control" id="textarea" rows="3"></textarea>
+                </div>
+                <button class="btn btn-default">Add comment</button>
+            </form>
+            <ul class="list-group" id="postsList">
+                <li class="list-group-item active">Posts</li>
+            </ul>
+            <div id="index">
+                <button type="button" class="btn btn-primary">Previous</button>
+                <button type="button" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+        <script src="bundle.js"></script>
+    </body>
+
+</html>
