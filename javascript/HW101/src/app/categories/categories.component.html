@@ -1,0 +1,14 @@
+<ul>
+  <li *ngFor="let category of categories ; let i=index;" (click)="showItems(i)">{{category.name}}
+    <input #addItemName type="text">
+    <input #addItemPrice type="number">
+    <button (click)="add(i, addItemName.value, addItemPrice.value)">Add Item</button>
+  </li>
+</ul>
+<ul *ngIf="selected">
+  <li *ngFor="let select of selected.items; let i=index">
+    name: {{select.name}} price: ${{select.price}}
+    <!-- <button (click)="delete(selected, i)">Delete</button> -->
+    <h2 *ngIf="!select.length">{{sorry}}</h2>
+  </li>
+</ul>
