@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="text-center">
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  <router-outlet></router-outlet>
+  <div class="text-center">
+    <button class="btn btn-primary" [routerLink]="['/contacts']">Contacts</button>
+    <button class="btn btn-primary" [routerLink]="['/add']">Add contact</button>
+  </div>
+</div>
