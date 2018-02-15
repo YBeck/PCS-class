@@ -11,6 +11,11 @@ const routes: Routes = [
   {
     path: "add",
     component: AddContactComponent
+  },
+  {
+    path: "",
+    redirectTo: "contacts",
+    pathMatch: "full"
   }
 ];
 
