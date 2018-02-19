@@ -12,11 +12,7 @@ class Student extends Component {
         </li>
         <ul>
           {marks.map(marks => {
-            return (
-              <li key={marks.toString()}>
-                <li>{marks}</li>
-              </li>
-            );
+            return <li key={marks.toString()}>{marks}</li>;
           })}
         </ul>
       </ul>
