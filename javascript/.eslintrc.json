@@ -11,7 +11,8 @@
       "modules": true,
       "experimentalObjectRestSpread": true
     },
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaVersion": 8
   },
   "rules": {
     "no-const-assign": "warn",
@@ -32,5 +33,6 @@
     },
     "propWrapperFunctions": ["forbidExtraProps"]
   },
-  "plugins": ["react"]
+  "plugins": ["react"],
+  "parser": "babel-eslint"
 }
