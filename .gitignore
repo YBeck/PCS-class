@@ -1,3 +1,4 @@
 PHP_Test/
 .jshintrc
 node_modules/
+.eslintrc.json

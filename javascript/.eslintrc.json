@@ -21,7 +21,8 @@
     "no-unreachable": "warn",
     "no-unused-vars": "warn",
     "constructor-super": "warn",
-    "valid-typeof": "warn"
+    "valid-typeof": "warn",
+    "no-console": "off"
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "settings": {
@@ -33,6 +34,6 @@
     },
     "propWrapperFunctions": ["forbidExtraProps"]
   },
-  "plugins": ["react"],
-  "parser": "babel-eslint"
+  "plugins": ["react"]
+  // "parser": "babel-eslint"
 }
