@@ -10,6 +10,6 @@ module.exports = function readFile(dir, fileExt, callback) {
     const filtered = files.filter(
       element => path.extname(element) === `.${fileExt}`
     );
-    return callback(null, filtered);
+    callback(null, filtered);
   });
 };
