@@ -23,10 +23,10 @@ let contacts = [
   }
 ];
 
-router.all("/", (req, res, next) => {
-  res.setHeader("Content-Type: text/HTML");
-  next();
-});
+// router.all("/", (req, res, next) => {
+//   res.setHeader("Content-Type: text/HTML");
+//   next();
+// });
 router.all("/", (req, res, next) => {
   res.send("<h1>PCS contacts</h1>");
   next();
@@ -36,14 +36,21 @@ router.get("/contacts", function(req, res, next) {
   res.render("index", { contacts: contacts });
   next();
 });
-// router.get("/add", function(req, res, next) {
-//   res.render("form");
-//   next();
-// });
+router.get("/add", function(req, res, next) {
+  res.render("form");
+  next();
+});
 
 router.post("/contacts", (req, res, next) => {
-  if (req.body.name) {
-    contacts.push(req.body.name);
+  // res.send(req.body.fname);
+  if (req.body) {
+    let newContact = {
+      first_name: req.body.fname,
+      last_name: req.body.lname,
+      email: req.body.email,
+      phone: req.body.phone
+    };
+    contacts.push(newContact);
     res.render("index", { contacts: contacts });
     next();
   } else {
