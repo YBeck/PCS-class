@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {{#posts}}
+    <div id="{{_id}}">
+        <h2>{{title}}</h2>
+        <h3>by {{author}} at {{date}}</h3>
+        <div>{{content}}</div>
+        <span>Comments: {{comment}}</span>
+        <button type="button" id="addCommentBtn">Add Comment</button>
+        <form method="post" id="commentForm">
+            <textarea name="comment" id="addComment" cols="30" rows="10" placeholder="Add a comment"></textarea>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    {{/posts}}
