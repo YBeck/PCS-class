@@ -10,7 +10,7 @@
         <button type="button" id="addCommentBtn">Add Comment</button>
         <form method="post" id="commentForm">
             <textarea name="comment" id="addComment" cols="30" rows="10" placeholder="Add a comment"></textarea>
-            <button type="submit">submit</button>
+            <button type="button" id="commentBtn">submit</button>
         </form>
     </div>
     {{/posts}}

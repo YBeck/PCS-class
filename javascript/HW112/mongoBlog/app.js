@@ -1,92 +1,124 @@
-const express = require("express"),
-  app = express(),
-  path = require("path"),
-  mongo = require("mongodb"),
-  bodyParser = require("body-parser");
+(function() {
+  "use strict";
+  const express = require("express"),
+    app = express(),
+    path = require("path"),
+    mongo = require("mongodb"),
+    bodyParser = require("body-parser");
 
-let posts;
-app.locals.title = "Express Mongo Blog";
-
-app.use(express.static(path.join(__dirname, "public")));
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "hjs");
-
-app.post("/", (req, res, next) => {
-  //   console.log(posts.find("name"));
-  posts.update({ $push: { comment: req.body.addComment } });
-  posts.find().toArray((err, posts) => {
-    res.render("layout", {
-      subtitle: "Posts",
-      posts: posts,
-      partials: {
-        content: "posts"
-      }
-    });
-  });
-  //   next();
-});
-
-app.get("/", (req, res, next) => {
-  posts.find().toArray((err, posts) => {
-    res.render("layout", {
-      subtitle: "Posts",
-      posts: posts,
-      partials: {
-        content: "posts"
-      }
-    });
-  });
-  //   next();
-});
-
-app.use(
-  require("./basicAuth")({
-    realm: app.locals.title,
-    users: {
-      donald: "trump",
-      me: "p@$$w0rd"
-    }
-  })
-);
-
-app.get("/new-post", (req, res, next) => {
-  res.render("layout", {
-    subtitle: "New Post",
-    partials: {
-      content: "newPost"
-    }
-  });
-});
-
-app.post("/new-post", (req, res, next) => {
-  const newPost = {
-    title: req.body.title,
-    content: req.body.content,
-    date: new Date(),
-    author: res.locals.user
-  };
-
-  posts.insert(newPost, (err, result) => {
+  let cheerio = require("cheerio"),
+    $ = cheerio.load("./views/posts.hjs"),
+    fs = require("fs");
+  fs.readFile("./views/posts.hjs", function(err, html) {
     if (err) {
-      next(err);
+      throw err;
+    } else {
+      $ = cheerio.load(html.toString());
+      const id = $("div").attr("id");
+      console.log(id);
     }
-    // console.log(result);
   });
 
-  res.redirect("/");
-});
+  let posts;
+  let postId;
+  app.locals.title = "Express Mongo Blog";
 
-app.listen(80);
+  // const commentBtn = document.getElementById("commentBtn");
+  // commentBtn.addEventListener("click", e => {
+  //   postId = e.target.parentNode.id;
+  // });
 
-mongo.MongoClient.connect("mongodb://localhost:27017", (err, client) => {
-  if (err) {
-    console.error(err);
-  }
-  const db = client.db("blog");
-  posts = db.collection("posts");
-});
+  app.use(express.static(path.join(__dirname, "public")));
+
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded({ extended: false }));
+
+  // view engine setup
+  app.set("views", path.join(__dirname, "views"));
+  app.set("view engine", "hjs");
+
+  app.get("/", (req, res, next) => {
+    posts.find().toArray((err, posts) => {
+      res.render("layout", {
+        subtitle: "Posts",
+        posts: posts,
+        partials: {
+          content: "posts"
+        }
+      });
+    });
+    //   next();
+  });
+
+  app.post("/", (req, res, next) => {
+    //   console.log(posts.find("name"));
+    posts.update(
+      { _id: postId },
+      { $push: { comment: req.body.addComment } },
+      (err, result) => {
+        if (err) {
+          return console.error(err);
+        }
+        // console.log("the comment ", result);
+      }
+    );
+    // posts.find().toArray((err, posts) => {
+    //   res.render("layout", {
+    //     subtitle: "Posts",
+    //     posts: posts,
+    //     partials: {
+    //       content: "posts"
+    //     }
+    //   });
+    // });
+
+    //   next();
+  });
+
+  app.use(
+    require("./basicAuth")({
+      realm: app.locals.title,
+      users: {
+        donald: "trump",
+        me: "p@$$w0rd"
+      }
+    })
+  );
+
+  app.get("/new-post", (req, res, next) => {
+    res.render("layout", {
+      subtitle: "New Post",
+      partials: {
+        content: "newPost"
+      }
+    });
+  });
+
+  app.post("/new-post", (req, res, next) => {
+    const newPost = {
+      title: req.body.title,
+      content: req.body.content,
+      date: new Date(),
+      author: res.locals.user
+    };
+
+    posts.insert(newPost, (err, result) => {
+      if (err) {
+        next(err);
+      }
+      // console.log(result);
+    });
+
+    res.redirect("/");
+  });
+
+  app.listen(3000);
+
+  mongo.MongoClient.connect("mongodb://localhost:27017", (err, client) => {
+    if (err) {
+      console.error(err);
+    }
+    const db = client.db("blog");
+    posts = db.collection("posts");
+  });
+})();
